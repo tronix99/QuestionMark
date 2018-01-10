@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="colorPrimary">#292A2D</color>
+    <color name="colorPrimaryDark">#1E1F21</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="fbcolor">#3b5998</color>
+    <color name="gcolor">#dd4b39</color>
+</resources>

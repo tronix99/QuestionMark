@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "375545772404",
+    "firebase_url": "https://fir-rentmyvehicle.firebaseio.com",
+    "project_id": "firebase-rentmyvehicle",
+    "storage_bucket": "firebase-rentmyvehicle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375545772404:android:84b53b231e92d5f2",
+        "android_client_info": {
+          "package_name": "com.arxera.rmvehicle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375545772404-089u6ub62uhka6f5pnuspebtql7d42ri.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "375545772404-o3chh6801n8u4008pour2guv3cgstdnq.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "375545772404-jgqqe7m12t3r6iu2la7dl6cdkeg7d93m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arxera.rmvehicle",
+            "certificate_hash": "8eaa66e450ca3698e59a76315da930d90d46ac4a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8WXltT6y4QGE7uVXSKEg76ghchKvMlBY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375545772404-089u6ub62uhka6f5pnuspebtql7d42ri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375545772404:android:29a81b147fc9d3af",
+        "android_client_info": {
+          "package_name": "com.arx_era.rentmyvehicle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375545772404-k03mvt1raut6euabcpjo5if8mfov6djt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arx_era.rentmyvehicle",
+            "certificate_hash": "8eaa66e450ca3698e59a76315da930d90d46ac4a"
+          }
+        },
+        {
+          "client_id": "375545772404-089u6ub62uhka6f5pnuspebtql7d42ri.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "375545772404-o3chh6801n8u4008pour2guv3cgstdnq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8WXltT6y4QGE7uVXSKEg76ghchKvMlBY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375545772404-089u6ub62uhka6f5pnuspebtql7d42ri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
