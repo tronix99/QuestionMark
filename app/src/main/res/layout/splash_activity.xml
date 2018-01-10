@@ -2,14 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     android:gravity="center">
 
     <TextView
+        android:id="@+id/rmv"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textColor="#454545"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
         android:gravity="center"
+        android:fontFamily="rema"
         android:text="RentMyVehcile" />
 
 </RelativeLayout>

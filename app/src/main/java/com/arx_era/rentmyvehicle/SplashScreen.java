@@ -2,8 +2,10 @@ package com.arx_era.rentmyvehicle;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.TextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -22,6 +24,10 @@ public class SplashScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
+
+        TextView tvTitle = (TextView)findViewById(R.id.rmv);
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/rema.ttf");
+        tvTitle.setTypeface(tf);
 
         new Handler().postDelayed(new Runnable() {
 

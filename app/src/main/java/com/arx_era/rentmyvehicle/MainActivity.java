@@ -4,11 +4,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button logout;
+    FloatingActionButton logout;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
     GoogleApiClient mGoogleApiClient;
@@ -57,7 +59,23 @@ public class MainActivity extends AppCompatActivity {
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
-        logout = (Button) findViewById(R.id.logout);
+        //TextView txt1 = (TextView) findViewById(R.id.txt1);
+        //TextView txt2 = (TextView) findViewById(R.id.txt2);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(MainActivity.this);
+        if (acct != null) {
+            String personName = acct.getDisplayName();
+            //txt1.setText(personName);
+            String personGivenName = acct.getGivenName();
+            String personFamilyName = acct.getFamilyName();
+            String personEmail = acct.getEmail();
+            //txt2.setText(personEmail);
+            String personId = acct.getId();
+            Uri personPhoto = acct.getPhotoUrl();
+
+        }
+
+        logout= (FloatingActionButton) findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
