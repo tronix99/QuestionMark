@@ -63,6 +63,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "375545772404-82oe2luv6t9i3fi8qtl51mr90qm8v4ke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arx_era.rentmyvehicle",
+            "certificate_hash": "599a589e25320b3b07b0330a7852b2694defa7be"
+          }
+        },
+        {
           "client_id": "375545772404-k03mvt1raut6euabcpjo5if8mfov6djt.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
