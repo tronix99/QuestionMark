@@ -80,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        tabLayout=(TabLayout)findViewById(R.id.tabs);
+
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
+
         logout= (FloatingActionButton) findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
