@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_temp_logo" />
 
     <TextView
         android:id="@+id/rmv"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textColor="#ffffff"
+        android:fontFamily="@font/rema"
         android:gravity="center"
-        android:fontFamily="rema"
-        android:text="RentMyVehcile" />
+        android:text="@string/app_name"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
 
-</RelativeLayout>
+</LinearLayout>
