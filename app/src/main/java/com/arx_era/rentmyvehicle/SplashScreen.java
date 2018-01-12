@@ -26,7 +26,7 @@ public class SplashScreen extends Activity {
         setContentView(R.layout.splash_activity);
 
         TextView tvTitle = (TextView)findViewById(R.id.rmv);
-        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/rema.ttf");
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/arkhip.ttf");
         tvTitle.setTypeface(tf);
 
         new Handler().postDelayed(new Runnable() {
@@ -48,7 +48,7 @@ public class SplashScreen extends Activity {
                 if(account != null){
                         i = new Intent(SplashScreen.this, MainActivity.class);
                 } else  if (account == null){
-                        i = new Intent(SplashScreen.this, LoginActivity.class);
+                        i = new Intent(SplashScreen.this, LoginRegisterActivity.class);
                 }
                 startActivity(i);
 

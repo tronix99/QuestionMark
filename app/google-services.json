@@ -15,20 +15,16 @@
       },
       "oauth_client": [
         {
-          "client_id": "375545772404-089u6ub62uhka6f5pnuspebtql7d42ri.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "375545772404-o3chh6801n8u4008pour2guv3cgstdnq.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "375545772404-jgqqe7m12t3r6iu2la7dl6cdkeg7d93m.apps.googleusercontent.com",
+          "client_id": "375545772404-9p36sf7b84qlnkp61ul3us4201biqrd4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.arxera.rmvehicle",
             "certificate_hash": "8eaa66e450ca3698e59a76315da930d90d46ac4a"
           }
+        },
+        {
+          "client_id": "375545772404-7d1j9kvker3mp1ne5ci83nl3mkemto1g.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
@@ -44,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "375545772404-089u6ub62uhka6f5pnuspebtql7d42ri.apps.googleusercontent.com",
+              "client_id": "375545772404-7d1j9kvker3mp1ne5ci83nl3mkemto1g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -63,7 +59,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "375545772404-82oe2luv6t9i3fi8qtl51mr90qm8v4ke.apps.googleusercontent.com",
+          "client_id": "375545772404-jm6e4dqtk7ajke8d0jpeg10a17fumial.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.arx_era.rentmyvehicle",
@@ -71,19 +67,7 @@
           }
         },
         {
-          "client_id": "375545772404-k03mvt1raut6euabcpjo5if8mfov6djt.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.arx_era.rentmyvehicle",
-            "certificate_hash": "8eaa66e450ca3698e59a76315da930d90d46ac4a"
-          }
-        },
-        {
-          "client_id": "375545772404-089u6ub62uhka6f5pnuspebtql7d42ri.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "375545772404-o3chh6801n8u4008pour2guv3cgstdnq.apps.googleusercontent.com",
+          "client_id": "375545772404-7d1j9kvker3mp1ne5ci83nl3mkemto1g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -100,7 +84,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "375545772404-089u6ub62uhka6f5pnuspebtql7d42ri.apps.googleusercontent.com",
+              "client_id": "375545772404-7d1j9kvker3mp1ne5ci83nl3mkemto1g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
