@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * Created by Tronix99 on 08-01-2018.
@@ -16,9 +17,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 public class SplashScreen extends Activity {
 
+    FirebaseAuth mAuth;
     // Splash screen timer
     private static int SPLASH_TIME_OUT = 1000;
-    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,21 +40,24 @@ public class SplashScreen extends Activity {
             @Override
             public void run() {
 
+                //initializing firebase auth object
+                mAuth = FirebaseAuth.getInstance();
 
-                // Check for existing Google Sign In account, if the user is already signed in
-                // the GoogleSignInAccount will be non-null.
-                GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(SplashScreen.this);
-                // This method will be executed once the timer is over
-                // Start your app main activity
-                if(account != null){
-                        i = new Intent(SplashScreen.this, MainActivity.class);
-                } else  if (account == null){
-                        i = new Intent(SplashScreen.this, LoginRegisterActivity.class);
+                if(mAuth.getCurrentUser() != null){
+                    //that means user is already logged in
+                    //so close this activity
+                    finish();
+
+                    //and open profile activity
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                }else if (mAuth.getCurrentUser() == null){
+                    //that means user is already logged in
+                    //so close this activity
+                    finish();
+
+                    //and open profile activity
+                    startActivity(new Intent(getApplicationContext(), LoginRegisterActivity.class));
                 }
-                startActivity(i);
-
-                // close this activity
-                finish();
             }
         }, SPLASH_TIME_OUT);
     }
