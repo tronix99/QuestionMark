@@ -1,5 +1,6 @@
 package com.arx_era.rentmyvehicle;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -77,6 +78,7 @@ public class LoginRegisterActivity extends AppCompatActivity {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("SIGN IN");
         dialog.setMessage("Please Use Email To Sign In");
+        final ProgressDialog progress = new ProgressDialog(this);
 
         LayoutInflater inflater = LayoutInflater.from(this);
         View signin_layout = inflater.inflate(R.layout.layout_sign_in,null);
@@ -92,6 +94,10 @@ public class LoginRegisterActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
 
+                        progress.setMessage("Loading :) ");
+                        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                        progress.setIndeterminate(true);
+                        progress.show();
                         //Check Validation
                         if (TextUtils.isEmpty(email.getText().toString())) {
                             Snackbar.make(rootLayout, "Enter EmailId", Snackbar.LENGTH_SHORT)

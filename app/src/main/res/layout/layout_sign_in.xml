@@ -7,13 +7,15 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/editEmail"
-            android:hint="Email"
+            android:hint="@string/email"
             android:text=""
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
@@ -28,7 +30,7 @@
             app:met_primaryColor="@color/colorPrimary"/>
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/editPass"
-            android:hint="Pass"
+            android:hint="@string/password"
             android:text=""
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
