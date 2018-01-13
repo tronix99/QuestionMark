@@ -6,10 +6,17 @@
     <string name="google">Google</string>
     <string name="lorem">awvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwai</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="name">Name</string>
     <string name="phone">Phone</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">close</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Connect</item>
+        <item>Fixtures</item>
+        <item>Table</item>
+    </string-array>
 </resources>
