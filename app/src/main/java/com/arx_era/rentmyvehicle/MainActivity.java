@@ -14,8 +14,13 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private ActionBar actionBar;
+    FirebaseUser user;
+    FirebaseAuth mAuth;
+    //view objects
+    private TextView name,email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        if (navigationView != null) {
+            setupNavigationDrawerContent(navigationView);
+        }
+
+        setupNavigationDrawerContent(navigationView);
+
+        //initializing firebase authentication object
+        mAuth = FirebaseAuth.getInstance();
+
+        //getting current user
+         user = mAuth.getCurrentUser();
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -47,12 +69,14 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout = (DrawerLayout) findViewById(R.id.main_layout);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
-        if (navigationView != null) {
-            setupNavigationDrawerContent(navigationView);
-        }
+        View navDrawerHeader =  navigationView.getHeaderView(0);
+        //initializing views
+        name = (TextView) navDrawerHeader.findViewById(R.id.name);
+        email = (TextView) navDrawerHeader.findViewById(R.id.email);
 
-        setupNavigationDrawerContent(navigationView);
+        //displaying logged in user name
+        name.setText(user.getDisplayName());
+        email.setText(user.getEmail());
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -97,11 +121,13 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
-                            case R.id.item_navigation_drawer_inbox:
-                                Toast.makeText(getApplicationContext(),"Hello Javatpoint",Toast.LENGTH_SHORT).show();
-                                return true;
-                            case R.id.item_navigation_drawer_starred:
-                                Toast.makeText(getApplicationContext(),"Hello Javatpoint",Toast.LENGTH_SHORT).show();
+                            case R.id.logout:
+                                //logging out the user
+                                mAuth.signOut();
+                                //closing activity
+                                finish();
+                                //starting login activity
+                                startActivity(new Intent(MainActivity.this, LoginRegisterActivity.class));
                                 return true;
                         }
                         return true;

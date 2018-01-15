@@ -4,25 +4,17 @@
     <group android:checkableBehavior="single">
         <item
             android:checked="true"
-            android:id="@+id/item_navigation_drawer_inbox"
+            android:id="@+id/home"
             android:icon="@drawable/logout"
-            android:title="Inbox" />
-        <item
-            android:id="@+id/item_navigation_drawer_starred"
-            android:icon="@drawable/logout"
-            android:title="Starred" />
+            android:title="@string/home" />
     </group>
 
     <item android:title="Subheader">
         <menu>
             <item
-                android:id="@+id/item_navigation_drawer_settings"
+                android:id="@+id/logout"
                 android:icon="@drawable/logout"
-                android:title="Settings" />
-            <item
-                android:id="@+id/item_navigation_drawer_help_and_feedback"
-                android:icon="@drawable/logout"
-                android:title="Help and feedback" />
+                android:title="@string/logout" />
         </menu>
     </item>
 

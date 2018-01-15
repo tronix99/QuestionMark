@@ -5,7 +5,7 @@
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
     <string name="lorem">awvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwaiawvwknaiwdnwajdiwjaidjwai</string>
-
+    <string name="home">Home</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -13,10 +13,13 @@
     <string name="phone">Phone</string>
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">close</string>
+    <string name="logout">Logout</string>
 
     <string-array name="navigation_drawer_items_array">
         <item>Connect</item>
         <item>Fixtures</item>
         <item>Table</item>
     </string-array>
+
+    <string name="api_key">AIzaSyDacPwZkcBgfe3xjZsPeO3xKeRTI4alXZQ</string>
 </resources>
