@@ -32,6 +32,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //ADDED LIB
+    compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.firebase:geofire-android:2.1.2'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'com.google.android.gms:play-services-auth:11.8.0'
