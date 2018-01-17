@@ -3,6 +3,10 @@
     package="com.arx_era.rentmyvehicle">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -42,8 +46,8 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"/>
         <activity android:name=".LoginRegisterActivity"
-            android:theme="@style/SplashScreen"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreen" />
     </application>
 
 </manifest>
