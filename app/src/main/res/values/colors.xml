@@ -2,9 +2,9 @@
 <resources>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="colorPrimary">#292A2D</color>
-    <color name="colorPrimaryDark">#1E1F21</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#2c2f33</color>
+    <color name="colorPrimaryDark">#23272a</color>
+    <color name="colorAccent">#7289da</color>
     <color name="fbcolor">#3b5998</color>
     <color name="gcolor">#dd4b39</color>
     <color name="btmtext">#6b6b76</color>

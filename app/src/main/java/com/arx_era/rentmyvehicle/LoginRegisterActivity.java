@@ -93,9 +93,8 @@ public class LoginRegisterActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
-
-                        progress.setMessage("Loading :) ");
-                        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                        sbtn.setEnabled(false);
+                        progress.setMessage("Logging..");
                         progress.setIndeterminate(true);
                         progress.show();
                         //Check Validation
@@ -120,14 +119,17 @@ public class LoginRegisterActivity extends AppCompatActivity {
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
-                                             startActivity(new Intent(LoginRegisterActivity.this, MainActivity.class));
-                                             finish();
+                                            progress.dismiss();
+                                            startActivity(new Intent(LoginRegisterActivity.this, MainActivity.class));
+                                            finish();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
+                                progress.dismiss();
                                 Snackbar.make(rootLayout, "Error" + e.getMessage(), Snackbar.LENGTH_SHORT)
                                         .show();
+                                sbtn.setEnabled(true);
                             }
                         });
                     }

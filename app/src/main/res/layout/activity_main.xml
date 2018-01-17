@@ -25,7 +25,7 @@
             android:elevation="6dp"
             android:minHeight="?attr/actionBarSize"
             app:tabGravity="fill"
-            app:tabIndicatorColor="#ff00ff"
+            app:tabIndicatorColor="@color/colorAccent"
             app:tabMode="fixed"
             app:tabSelectedTextColor="#ffffff"
             app:tabTextColor="#d3d3d3" />
@@ -35,13 +35,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/toolbar"
+            android:layout_above="@+id/tabs"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
-        android:layout_width="240dp"
+        android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="@bool/fitsSystemWindows"

@@ -8,50 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:375545772404:android:84b53b231e92d5f2",
-        "android_client_info": {
-          "package_name": "com.arxera.rmvehicle"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "375545772404-9p36sf7b84qlnkp61ul3us4201biqrd4.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.arxera.rmvehicle",
-            "certificate_hash": "8eaa66e450ca3698e59a76315da930d90d46ac4a"
-          }
-        },
-        {
-          "client_id": "375545772404-7d1j9kvker3mp1ne5ci83nl3mkemto1g.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB8WXltT6y4QGE7uVXSKEg76ghchKvMlBY"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "375545772404-7d1j9kvker3mp1ne5ci83nl3mkemto1g.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:375545772404:android:29a81b147fc9d3af",
         "android_client_info": {
           "package_name": "com.arx_era.rentmyvehicle"
@@ -59,21 +15,21 @@
       },
       "oauth_client": [
         {
+          "client_id": "375545772404-7d1j9kvker3mp1ne5ci83nl3mkemto1g.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
           "client_id": "375545772404-jm6e4dqtk7ajke8d0jpeg10a17fumial.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.arx_era.rentmyvehicle",
             "certificate_hash": "599a589e25320b3b07b0330a7852b2694defa7be"
           }
-        },
-        {
-          "client_id": "375545772404-7d1j9kvker3mp1ne5ci83nl3mkemto1g.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB8WXltT6y4QGE7uVXSKEg76ghchKvMlBY"
+          "current_key": "AIzaSyBxcEiWWKpLMtkPUjXjQPO0e4D2DbLmPpY"
         }
       ],
       "services": {

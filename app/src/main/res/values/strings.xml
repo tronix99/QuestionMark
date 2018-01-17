@@ -22,4 +22,5 @@
     </string-array>
 
     <string name="api_key">AIzaSyDacPwZkcBgfe3xjZsPeO3xKeRTI4alXZQ</string>
+    <string name="profile">Profile</string>
 </resources>
