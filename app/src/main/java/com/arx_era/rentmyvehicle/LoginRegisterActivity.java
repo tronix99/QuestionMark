@@ -39,11 +39,10 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class LoginRegisterActivity extends AppCompatActivity {
 
-    SignInButton gbtn;
     FirebaseAuth mAuth;
     FirebaseDatabase db;
     DatabaseReference users;
-    Button sbtn,rbtn;
+    Button sbtn, rbtn;
     RelativeLayout rootLayout;
 
 
@@ -81,7 +80,7 @@ public class LoginRegisterActivity extends AppCompatActivity {
         final ProgressDialog progress = new ProgressDialog(this);
 
         LayoutInflater inflater = LayoutInflater.from(this);
-        View signin_layout = inflater.inflate(R.layout.layout_sign_in,null);
+        View signin_layout = inflater.inflate(R.layout.layout_sign_in, null);
 
         final MaterialEditText email = signin_layout.findViewById(R.id.editEmail);
         final MaterialEditText password = signin_layout.findViewById(R.id.editPass);
@@ -90,50 +89,50 @@ public class LoginRegisterActivity extends AppCompatActivity {
 
         //Set Buttons
         dialog.setPositiveButton("SIGIN IN", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                        sbtn.setEnabled(false);
-                        progress.setMessage("Logging..");
-                        progress.setIndeterminate(true);
-                        progress.show();
-                        //Check Validation
-                        if (TextUtils.isEmpty(email.getText().toString())) {
-                            Snackbar.make(rootLayout, "Enter EmailId", Snackbar.LENGTH_SHORT)
-                                    .show();
-                            return;
-                        }
-                        if (TextUtils.isEmpty(password.getText().toString())) {
-                            Snackbar.make(rootLayout, "Enter Passeord", Snackbar.LENGTH_SHORT)
-                                    .show();
-                            return;
-                        }
-                        if (password.getText().toString().length() < 8) {
-                            Snackbar.make(rootLayout, "Password to short", Snackbar.LENGTH_SHORT)
-                                    .show();
-                            return;
-                        }
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+                sbtn.setEnabled(false);
+                progress.setMessage("Logging..");
+                progress.setIndeterminate(true);
+                progress.show();
+                //Check Validation
+                if (TextUtils.isEmpty(email.getText().toString())) {
+                    Snackbar.make(rootLayout, "Enter EmailId", Snackbar.LENGTH_SHORT)
+                            .show();
+                    return;
+                }
+                if (TextUtils.isEmpty(password.getText().toString())) {
+                    Snackbar.make(rootLayout, "Enter Passeord", Snackbar.LENGTH_SHORT)
+                            .show();
+                    return;
+                }
+                if (password.getText().toString().length() < 8) {
+                    Snackbar.make(rootLayout, "Password to short", Snackbar.LENGTH_SHORT)
+                            .show();
+                    return;
+                }
 
-                        //Login
-                        mAuth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString())
-                                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                                    @Override
-                                    public void onSuccess(AuthResult authResult) {
-                                            progress.dismiss();
-                                            startActivity(new Intent(LoginRegisterActivity.this, MainActivity.class));
-                                            finish();
-                                    }
-                                }).addOnFailureListener(new OnFailureListener() {
+                //Login
+                mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
-                            public void onFailure(@NonNull Exception e) {
+                            public void onSuccess(AuthResult authResult) {
                                 progress.dismiss();
-                                Snackbar.make(rootLayout, "Error" + e.getMessage(), Snackbar.LENGTH_SHORT)
-                                        .show();
-                                sbtn.setEnabled(true);
+                                startActivity(new Intent(LoginRegisterActivity.this, MainActivity.class));
+                                finish();
                             }
-                        });
+                        }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        progress.dismiss();
+                        Snackbar.make(rootLayout, "Error" + e.getMessage(), Snackbar.LENGTH_SHORT)
+                                .show();
+                        sbtn.setEnabled(true);
                     }
                 });
+            }
+        });
 
         dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
@@ -151,7 +150,7 @@ public class LoginRegisterActivity extends AppCompatActivity {
         dialog.setMessage("Please Use Email To Register");
 
         LayoutInflater inflater = LayoutInflater.from(this);
-        View register_layout = inflater.inflate(R.layout.layout_register,null);
+        View register_layout = inflater.inflate(R.layout.layout_register, null);
 
         final MaterialEditText email = register_layout.findViewById(R.id.editEmail);
         final MaterialEditText password = register_layout.findViewById(R.id.editPass);
@@ -167,29 +166,29 @@ public class LoginRegisterActivity extends AppCompatActivity {
                 dialogInterface.dismiss();
 
                 //Check Validation
-                if(TextUtils.isEmpty(email.getText().toString())){
-                    Snackbar.make(rootLayout,"Enter EmailId",Snackbar.LENGTH_SHORT)
+                if (TextUtils.isEmpty(email.getText().toString())) {
+                    Snackbar.make(rootLayout, "Enter EmailId", Snackbar.LENGTH_SHORT)
                             .show();
                     return;
                 }
-                if(TextUtils.isEmpty(phone.getText().toString())){
-                    Snackbar.make(rootLayout,"Enter Phone",Snackbar.LENGTH_SHORT)
+                if (TextUtils.isEmpty(phone.getText().toString())) {
+                    Snackbar.make(rootLayout, "Enter Phone", Snackbar.LENGTH_SHORT)
                             .show();
                     return;
                 }
-                if(TextUtils.isEmpty(password.getText().toString())){
-                    Snackbar.make(rootLayout,"Enter Password",Snackbar.LENGTH_SHORT)
+                if (TextUtils.isEmpty(password.getText().toString())) {
+                    Snackbar.make(rootLayout, "Enter Password", Snackbar.LENGTH_SHORT)
                             .show();
                     return;
                 }
-                if(password.getText().toString().length() < 8){
-                    Snackbar.make(rootLayout,"Password to short",Snackbar.LENGTH_SHORT)
+                if (password.getText().toString().length() < 8) {
+                    Snackbar.make(rootLayout, "Password to short", Snackbar.LENGTH_SHORT)
                             .show();
                     return;
                 }
 
                 //Register User user
-                mAuth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString())
+                mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
@@ -205,26 +204,26 @@ public class LoginRegisterActivity extends AppCompatActivity {
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
-                                                Snackbar.make(rootLayout,"Registered",Snackbar.LENGTH_SHORT)
+                                                Snackbar.make(rootLayout, "Registered", Snackbar.LENGTH_SHORT)
                                                         .show();
                                             }
                                         })
                                         .addOnFailureListener(new OnFailureListener() {
                                             @Override
                                             public void onFailure(@NonNull Exception e) {
-                                                Snackbar.make(rootLayout,"Registration failed",Snackbar.LENGTH_SHORT)
+                                                Snackbar.make(rootLayout, "Registration failed", Snackbar.LENGTH_SHORT)
                                                         .show();
                                             }
                                         });
                             }
                         })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Snackbar.make(rootLayout,"Registration failed",Snackbar.LENGTH_SHORT)
-                                .show();
-                    }
-                });
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Snackbar.make(rootLayout, "Registration failed", Snackbar.LENGTH_SHORT)
+                                        .show();
+                            }
+                        });
             }
         });
         dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -233,7 +232,6 @@ public class LoginRegisterActivity extends AppCompatActivity {
                 dialogInterface.dismiss();
             }
         });
-
         dialog.show();
     }
 

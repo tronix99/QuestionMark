@@ -26,7 +26,7 @@ public class Profile extends Fragment {
     FirebaseAuth mAuth;
 
     //view objects
-    private TextView textViewUserEmail,textViewUserName;
+    private TextView textViewUserEmail,textViewUserName,textViewUserPhone;
     private Button buttonLogout;
 
     public Profile() {
@@ -51,11 +51,13 @@ public class Profile extends Fragment {
         //initializing views
         textViewUserEmail = (TextView) view.findViewById(R.id.textViewUserEmail);
         textViewUserName = (TextView) view.findViewById(R.id.textViewUserName);
+        textViewUserPhone = (TextView) view.findViewById(R.id.textViewUserPhone);
         buttonLogout = (Button) view.findViewById(R.id.buttonLogout);
 
         //displaying logged in user name
         textViewUserEmail.setText(user.getEmail());
-        textViewUserName.setText(user.getDisplayName());
+        textViewUserName.setText("?"+user.getPhoneNumber());
+        textViewUserPhone.setText(user.getPhoneNumber());
 
         //adding listener to button
         buttonLogout.setOnClickListener(new View.OnClickListener() {

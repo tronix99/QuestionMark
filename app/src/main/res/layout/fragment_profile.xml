@@ -43,6 +43,14 @@
                 android:textSize="15sp"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
+            <TextView
+                android:id="@+id/textViewUserPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Large Text"
+                android:textSize="15sp"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
             <Button
                 android:id="@+id/buttonLogout"
                 android:layout_width="wrap_content"

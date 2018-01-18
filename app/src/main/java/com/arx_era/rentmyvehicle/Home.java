@@ -78,7 +78,6 @@ public class Home extends Fragment implements OnMapReadyCallback,
     }
 
     protected synchronized void buildGoogleApiClient() {
-        Toast.makeText(getContext(), "buildGoogleApiClient", Toast.LENGTH_SHORT).show();
         mGoogleApiClient = new GoogleApiClient.Builder(getContext())
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
