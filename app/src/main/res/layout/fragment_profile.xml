@@ -3,12 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:padding="5dp"
+    android:orientation="vertical"
     tools:context="com.arx_era.rentmyvehicle.Profile">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -32,30 +36,56 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Large Text"
-                android:textSize="18sp"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewUserEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Large Text"
-                android:textSize="15sp"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/textViewUserPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Large Text"
-                android:textSize="15sp"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15sp" />
 
-            <Button
-                android:id="@+id/buttonLogout"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/custlogins"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Logout" />
+                android:layout_above="@id/appname"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/buttonLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:background="@color/transparent"
+                    android:text="@string/logout" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+        <ImageButton
+            android:id="@+id/editProfile"
+            android:layout_marginEnd="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_edit_black_24dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:scrollbars="vertical"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"/>
 </LinearLayout>

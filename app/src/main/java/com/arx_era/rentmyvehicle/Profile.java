@@ -2,28 +2,29 @@ package com.arx_era.rentmyvehicle;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
+import com.arx_era.rentmyvehicle.Adapters.profile_list;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Profile extends Fragment {
 
     FirebaseAuth mAuth;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+
 
     //view objects
     private TextView textViewUserEmail,textViewUserName,textViewUserPhone;
@@ -56,7 +57,7 @@ public class Profile extends Fragment {
 
         //displaying logged in user name
         textViewUserEmail.setText(user.getEmail());
-        textViewUserName.setText("?"+user.getPhoneNumber());
+        textViewUserName.setText("?"+user.getDisplayName());
         textViewUserPhone.setText(user.getPhoneNumber());
 
         //adding listener to button
@@ -74,6 +75,17 @@ public class Profile extends Fragment {
                     }
             }
         });
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        List<String> list_profile = new ArrayList<>();
+        list_profile.add("Test");
+        list_profile.add("Test");
+        list_profile.add("Test");
+        mAdapter = new profile_list(list_profile);
+        recyclerView.setAdapter(mAdapter);
 
         return view;
     }

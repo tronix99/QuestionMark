@@ -1,4 +1,4 @@
-package com.arx_era.rentmyvehicle.Model;
+package com.arx_era.rentmyvehicle.Database;
 
 /**
  * Created by Tronix99 on 12-01-2018.

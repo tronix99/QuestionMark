@@ -22,6 +22,7 @@ android {
 
 dependencies {
     //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.google.firebase:firebase-auth:11.8.0'
     implementation 'com.android.support:support-v4:27.0.2'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -32,6 +33,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //ADDED LIB
+    compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.firebase:geofire-android:2.1.2'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
